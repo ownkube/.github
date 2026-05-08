@@ -2,7 +2,7 @@
 
 # Ownkube
 
-### Heroku's simplicity on your own cloud account. AI handles the ops.
+### Push to deploy. On your own AWS account.
 
 > Ship like a giant. Stay lean like a startup.
 
@@ -13,7 +13,7 @@
 
 ---
 
-Ownkube is a developer platform that deploys directly into your AWS VPC — so you keep your data, your cloud credits, and full control of your infrastructure. No more choosing between developer speed and infrastructure ownership.
+Ownkube deploys directly into your AWS VPC. Push to main, get a preview URL. Agents catch crashes, right-size workloads, and trim spend — so you can skip the $200K DevOps hire and keep your data, credits, and control.
 
 ---
 
@@ -21,9 +21,9 @@ Ownkube is a developer platform that deploys directly into your AWS VPC — so y
 
 | Step | Action | Details |
 |:---:|:---|:---|
-| **01** | **Connect your cloud** | Link your AWS account with least-privilege access. Your data stays in your VPC. |
-| **02** | **Push your code** | Git push or connect a repo. Ownkube detects your framework, builds, and deploys automatically. |
-| **03** | **Ship and forget** | AI monitors everything — errors, costs, performance. You focus on your product. |
+| **01** | **Connect your cloud** | Link your AWS account with a least-privilege CloudFormation stack. Minutes, not a sales call. |
+| **02** | **Push your code** | Git push or connect a repo. We detect your framework, build the container, and deploy. |
+| **03** | **Ship and forget** | Cost, Incident, and Scaling agents watch your stack. Right-size before crashes, explain failures in plain English, page a human only when there's a real call. |
 
 ---
 
@@ -31,15 +31,15 @@ Ownkube is a developer platform that deploys directly into your AWS VPC — so y
 
 | Your cloud, your rules | Instant infrastructure |
 |:---|:---|
-| Deploy to your own AWS VPC. Keep your startup credits. Disconnect anytime. Zero vendor lock-in. | One-click databases, auto CI/CD, git push to production. No config files. |
+| Vanilla k3s or EKS in your own AWS VPC. Data never leaves your account. Disconnect anytime — everything keeps running. | One-click databases, auto CI/CD, git push to production. No config files. |
 
-| Preview environments per PR | Intelligent operations |
+| Preview domains, no DNS setup | Cost agent: spend, watched |
 |:---|:---|
-| Full-stack environments with isolated databases. Auto-teardown on merge. | Autonomous error detection, cost optimization, and performance tuning — like a platform team that never sleeps. |
+| Every PR gets a full-stack environment on a ready-to-share Cloudflare domain. DDoS, bot, and scrape protection included. Torn down on merge. | Auto-sleeps idle envs (up to 60% overnight). Moves stateless workloads to spot (up to 70% off). Pings you the moment an anomaly hits the bill. |
 
-| Smart cost optimization | Plain-English error reports |
+| Incident agent: crashes, explained | Scaling agent: capacity, sized |
 |:---|:---|
-| Auto-sleep saves 60% overnight. Spot instances save up to 70%. Real-time anomaly alerts. | Crash explanations you can actually read. Proactive alerts before users notice. |
+| "Your worker tried to load a 2GB dataset into 512MB RAM." Plain English, root cause hint, suggested fix. Not a stack trace at 3am. | Right-sizes containers from real usage data. Catches over-provisioning before the bill does. |
 
 ---
 
@@ -47,12 +47,12 @@ Ownkube is a developer platform that deploys directly into your AWS VPC — so y
 
 <div align="center">
 
-| Free | $10/mo per vCPU | $5/mo per GB RAM |
+| Free forever | $10/mo per vCPU | $5/mo per GB RAM |
 |:---:|:---:|:---:|
-| Up to 10 vCPU / 1 cluster | Usage-based scaling | No markup on compute |
+| Single-node clusters | Multi-node, usage-based | No markup on compute |
 
-No credit card required. Cloud costs go directly to AWS at wholesale rates.
-<br/>Compatible with **AWS Activate** and **GCP for Startups** credits.
+No credit card. Cloud costs go directly to your AWS account at wholesale rates.
+<br/>Works with **AWS Activate** and **GCP for Startups** credits.
 
 </div>
 
@@ -60,9 +60,9 @@ No credit card required. Cloud costs go directly to AWS at wholesale rates.
 
 <div align="center">
 
-### Get Started
+### Stop choosing between velocity and control
 
-Connect your cloud in minutes. Deploy your first app today. Disconnect anytime.
+Connect your AWS account in minutes. Push code, get a preview URL, and let the agents take ops off your plate.
 
 [Connect your cloud](https://app.ownkube.io/signup) | [View pricing](https://ownkube.io/pricing) | [Read the blog](https://ownkube.io/blog)
 
