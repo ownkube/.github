@@ -2,68 +2,58 @@
 
 # Ownkube
 
-### Push to deploy. On your own AWS account.
+### A cloud for personal software.
 
-> Ship like a giant. Stay lean like a startup.
+Ship like a giant. Stay lean like a startup.
 
-[![Website](https://img.shields.io/badge/Website-ownkube.io-C2923A?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ownkube.io)
-[![Get Started](https://img.shields.io/badge/Get_Started-Free-10B981?style=for-the-badge&logo=rocket&logoColor=white)](https://app.ownkube.io/signup)
-
-</div>
-
----
-
-Ownkube deploys directly into your AWS VPC. Push to main, get a preview URL. Agents catch crashes, right-size workloads, and trim spend — so you can skip the $200K DevOps hire and keep your data, credits, and control.
-
----
-
-### How It Works
-
-| Step | Action | Details |
-|:---:|:---|:---|
-| **01** | **Connect your cloud** | Link your AWS account with a least-privilege CloudFormation stack. Minutes, not a sales call. |
-| **02** | **Push your code** | Git push or connect a repo. We detect your framework, build the container, and deploy. |
-| **03** | **Ship and forget** | Cost, Incident, and Scaling agents watch your stack. Right-size before crashes, explain failures in plain English, page a human only when there's a real call. |
-
----
-
-### Why Ownkube?
-
-| Your cloud, your rules | Instant infrastructure |
-|:---|:---|
-| Vanilla k3s or EKS in your own AWS VPC. Data never leaves your account. Disconnect anytime — everything keeps running. | One-click databases, auto CI/CD, git push to production. No config files. |
-
-| Preview domains, no DNS setup | Cost agent: spend, watched |
-|:---|:---|
-| Every PR gets a full-stack environment on a ready-to-share Cloudflare domain. DDoS, bot, and scrape protection included. Torn down on merge. | Auto-sleeps idle envs (up to 60% overnight). Moves stateless workloads to spot (up to 70% off). Pings you the moment an anomaly hits the bill. |
-
-| Incident agent: crashes, explained | Scaling agent: capacity, sized |
-|:---|:---|
-| "Your worker tried to load a 2GB dataset into 512MB RAM." Plain English, root cause hint, suggested fix. Not a stack trace at 3am. | Right-sizes containers from real usage data. Catches over-provisioning before the bill does. |
-
----
-
-### Pricing
-
-<div align="center">
-
-| Free forever | $10/mo per vCPU | $5/mo per GB RAM |
-|:---:|:---:|:---:|
-| Single-node clusters | Multi-node, usage-based | No markup on compute |
-
-No credit card. Cloud costs go directly to your AWS account at wholesale rates.
-<br/>Works with **AWS Activate** and **GCP for Startups** credits.
+[![Website](https://img.shields.io/badge/ownkube.io-FBBF24?style=for-the-badge)](https://ownkube.io)
+[![Deploy my first app](https://img.shields.io/badge/Deploy_my_first_app-10B981?style=for-the-badge)](https://app.ownkube.io/login)
+[![Docs](https://img.shields.io/badge/Docs-27272A?style=for-the-badge)](https://ownkube.io/docs)
 
 </div>
 
 ---
 
+Ownkube deploys your apps and databases in seconds. Connect a GitHub or GitLab repo, push to main, and get a live URL with TLS on a ready-to-share domain. There is no cloud account to set up and no config to write.
+
+### What ships today
+
+- Builds from source on every push, from your Dockerfile or detected automatically when there isn't one
+- Automatic TLS and a ready-to-share domain on Cloudflare's edge, with DDoS and bot protection included
+- Managed Postgres with automatic backups, point-in-time recovery, and optional high availability
+- Managed Valkey cache (Redis-compatible), one click
+- Horizontal autoscaling on CPU and memory
+- Live logs and CPU and memory metrics for every deployment
+- Scheduled jobs on a cron, with run history and run-now
+- One-click rollback to an earlier revision
+
+### Pricing you can predict
+
+Usage is metered per minute and drawn from a prepaid balance, so a mostly idle app barely registers. Plans start at $5 a month, which loads $5 of credit, and unused credit rolls over. Managed Postgres starts at $4 a month and a cache at $2 a month. Monthly budget caps and spending alerts keep the bill where you set it. [See pricing](https://ownkube.io/pricing).
+
+### From your terminal or your coding agent
+
+```sh
+brew install ownkube/tap/okctl
+okctl login
+```
+
+`okctl` covers clusters, environments, deployments, logs, and revisions, and every read command speaks `-o json`. You can also connect Claude Code, Cursor, Codex, and other coding agents to Ownkube over MCP: [ownkube.io/agents](https://ownkube.io/agents).
+
+When you want it, the same app runs in your own AWS account with no rewrite, logs and metrics included. GCP and Azure are coming soon.
+
+### Open source
+
+| Repository | What it is |
+|:---|:---|
+| [ownkube-cli](https://github.com/ownkube/ownkube-cli) | `okctl`, the Ownkube command-line interface |
+| [homebrew-tap](https://github.com/ownkube/homebrew-tap) | Homebrew tap for `okctl` |
+| [kubernetes-events-exporter](https://github.com/ownkube/kubernetes-events-exporter) | Maintained fork that exports cluster events to 30+ sinks |
+
+---
+
 <div align="center">
 
-### Stop choosing between velocity and control
-
-Connect your AWS account in minutes. Push code, get a preview URL, and let the agents take ops off your plate.
-
-[Connect your cloud](https://app.ownkube.io/signup) | [View pricing](https://ownkube.io/pricing) | [Read the blog](https://ownkube.io/blog)
+[Deploy my first app](https://app.ownkube.io/login) | [Docs](https://ownkube.io/docs) | [Pricing](https://ownkube.io/pricing) | [Blog](https://ownkube.io/blog) | [Changelog](https://ownkube.io/changelog)
 
 </div>
