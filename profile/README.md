@@ -19,26 +19,40 @@ Ownkube deploys your apps and databases in seconds. Connect a GitHub or GitLab r
 ### What ships today
 
 - Builds from source on every push, from your Dockerfile or detected automatically when there isn't one
-- Automatic TLS and a ready-to-share domain on Cloudflare's edge, with DDoS and bot protection included
-- Managed Postgres with automatic backups, point-in-time recovery, and optional high availability
+- Automatic TLS and a ready-to-share `ownkube.app` domain for every web app
+- Sleep and wake: idle apps, databases, and caches scale to zero and wake on the next request or connection
+- Managed Postgres, with 7-day backups and point-in-time recovery on paid plans and standby replicas on Team
 - Managed Valkey cache (Redis-compatible), one click
+- Marketplace of open-source apps like n8n, Metabase, Directus, and Umami, deployed in one click with their database wired in
 - Horizontal autoscaling on CPU and memory
-- Live logs and CPU and memory metrics for every deployment
+- Live logs, CPU and memory metrics, request rate, p95 latency, and metric alerts for every deployment
+- A data tab to browse tables and keys and run queries against your database or cache
+- Shell and SSH into a running app, from the dashboard or with `okctl ssh`
 - Scheduled jobs on a cron, with run history and run-now
-- One-click rollback to an earlier revision
+- One-click rollback to a recent build
 
 ### Pricing you can predict
 
-Usage is metered per minute and drawn from a prepaid balance, so a mostly idle app barely registers. Plans start at $5 a month, which loads $5 of credit, and unused credit rolls over. Managed Postgres starts at $4 a month and a cache at $2 a month. Monthly budget caps and spending alerts keep the bill where you set it. [See pricing](https://ownkube.io/pricing).
+Usage is metered per minute and drawn from a prepaid balance, so a mostly idle app barely registers and a sleeping one costs nothing for compute. Start on Pay as you go by topping up from $5, with no subscription. Plans start at $5 a month, load that much credit each cycle, and unlock higher limits. Unused credit rolls over. Managed Postgres starts at $4 a month and a cache at $2 a month. Monthly budget caps and spending alerts keep the bill where you set it. [See pricing](https://ownkube.io/pricing).
 
-### From your terminal or your coding agent
+### One prompt to production
+
+Paste this into your coding agent from inside your repo:
+
+```text
+Fetch https://ownkube.io/prompt.md and follow it to deploy this repo on Ownkube.
+```
+
+Your agent deploys through the Ownkube MCP server and `okctl`. You sign in, connect GitHub, and approve the deploy. Claude Code, Cursor, Codex, and other coding agents are supported: [ownkube.io/agents](https://ownkube.io/agents).
+
+Prefer the terminal yourself:
 
 ```sh
 brew install ownkube/tap/okctl
 okctl login
 ```
 
-`okctl` covers clusters, environments, deployments, logs, and revisions, and every read command speaks `-o json`. You can also connect Claude Code, Cursor, Codex, and other coding agents to Ownkube over MCP: [ownkube.io/agents](https://ownkube.io/agents).
+`okctl` covers projects, environments, deployments, logs, alerts, and marketplace apps, plus `okctl ssh` for shells and `okctl connect` for `psql` and `valkey-cli`. Every read command speaks `-o json`.
 
 When you want it, the same app runs in your own AWS account with no rewrite, logs and metrics included. GCP and Azure are coming soon.
 
