@@ -14,7 +14,9 @@ One prompt to production.
 
 ---
 
-Deploy your apps, Postgres, and cache in seconds. Connect a GitHub or GitLab repo, push, and get a live URL with TLS. No cloud account, no config. Usage is billed per minute from a prepaid balance, and idle apps sleep.
+Deploy your apps, Postgres, and Valkey cache in seconds. Connect a GitHub or GitLab repo, push, and get a live URL with HTTPS. You start without a cloud account or a config file. Apps draw from a prepaid wallet per minute, idle apps sleep, and unused credit never expires.
+
+When a customer wants your app in their own cloud account, the same app moves there with no rewrite, and its logs, metrics, and health checks come with it.
 
 Paste this into your coding agent:
 
@@ -28,11 +30,15 @@ Or use the CLI:
 brew install ownkube/tap/okctl
 ```
 
+Or start from the [Marketplace](https://ownkube.io/templates): n8n, Metabase, Grafana, Uptime Kuma, and more in one click, with managed Postgres and HTTPS wired in.
+
 ### Open source
 
 | Repository | What it is |
 |:---|:---|
 | [ownkube-cli](https://github.com/ownkube/ownkube-cli) | `okctl`, the Ownkube CLI |
+| [mcp](https://github.com/ownkube/mcp) | Hosted MCP server: deploy apps, Postgres, and Valkey from Claude Code, Cursor, Codex, or any MCP client |
+| [keyseal](https://github.com/ownkube/keyseal) | Encrypted secrets in your repo, unlocked by your own key, rotated without a redeploy |
 | [homebrew-tap](https://github.com/ownkube/homebrew-tap) | Homebrew tap for `okctl` |
 | [kubernetes-events-exporter](https://github.com/ownkube/kubernetes-events-exporter) | Exports cluster events to 30+ sinks |
 
@@ -40,6 +46,6 @@ brew install ownkube/tap/okctl
 
 <div align="center">
 
-[Docs](https://ownkube.io/docs) | [Pricing](https://ownkube.io/pricing) | [Agents](https://ownkube.io/agents) | [Blog](https://ownkube.io/blog) | [Changelog](https://ownkube.io/changelog)
+[Docs](https://ownkube.io/docs) | [Pricing](https://ownkube.io/pricing) | [Marketplace](https://ownkube.io/templates) | [Agents](https://ownkube.io/agents) | [Blog](https://ownkube.io/blog) | [Changelog](https://ownkube.io/changelog)
 
 </div>
